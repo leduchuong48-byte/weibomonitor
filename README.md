@@ -1,5 +1,7 @@
 # Weibo Monitor
 
+[English](README_en.md)
+
 基于 `FastAPI + React` 的微博媒体下载与监控工具。支持通过登录态 Cookie 抓取微博图片、视频、Live Photo，并提供 Web 页面管理任务与查看日志。
 
 ## 功能
@@ -53,4 +55,4 @@ cp .env.example .env
 
 ## 免责声明
 
-仅用于个人备份与学习用途，请遵守平台规则与当地法律法规。
+使用本项目即表示你已阅读并同意 [免责声明](DISCLAIMER.md)。
