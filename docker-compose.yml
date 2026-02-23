@@ -1,0 +1,23 @@
+name: weibo-monitor
+
+services:
+  weibo-monitor:
+    build:
+      context: .
+      args:
+        BASE_IMAGE: ${BASE_IMAGE:-python:3.9-slim}
+        NODE_IMAGE: ${NODE_IMAGE:-node:18-alpine}
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-}
+        NPM_REGISTRY: ${NPM_REGISTRY:-}
+        DEBIAN_MIRROR: ${DEBIAN_MIRROR:-}
+    container_name: weibo-monitor
+    restart: unless-stopped
+    ports:
+      - "1003:8000"
+    volumes:
+      - ./data:/app/data
+      - ./weibo_media:/app/weibo_media
+    environment:
+      - TZ=Asia/Shanghai
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN:-}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID:-}

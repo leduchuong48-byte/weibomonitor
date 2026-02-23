@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Frontend build
+frontend/node_modules/
+frontend/dist/
+
+# Runtime private data
+data/cookie.txt
+data/weibo.log
+weibo_media/
+
+# Local env / secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+._*
+.vscode/
+.idea/
